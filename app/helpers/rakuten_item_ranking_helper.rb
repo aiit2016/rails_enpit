@@ -1,0 +1,2 @@
+module RakutenItemRankingHelper
+end
