@@ -8,7 +8,24 @@
 </head>
 <body>
 
-<%= yield %>
+    <div id="main-container" class="container">
+      <div class="row">
+        <div class="col-xs-3">
+          <h3>Koala@enpit</h3>
+          <h4>System Management</h4>
+          <p>
+            <a href='books'>Book Management</a>
+          </p>
+          <h4>楽天API</h4>
+          <p>
+            <a href='rakuten_item_ranking'>40代男性 のランキングTOP 30</a>
+          </p>
+        </div>
+        <div class="col-xs-9">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
 
 </body>
 </html>
