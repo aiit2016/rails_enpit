@@ -9,6 +9,7 @@ class A1630tyrankController < ApplicationController
     end
 
     # Use genre id to fetch genre object
-    @rankings = RakutenWebService::Ichiba::Item.ranking(:age => 30, :sex => 1)
+    @rankings = RakutenWebService::Ichiba::Item.search(:keyword => 'Ruby', :shopCode => 'bookoffonline') 
+   # @rankings = RakutenWebService::Ichiba::Item.ranking(:age => 30, :sex => 1)
   end
 end
