@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'rakuten_book_search/index'
+
   resources :books
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -13,6 +15,8 @@ Rails.application.routes.draw do
   get 'rakuten_item_search_result' => 'rakuten_item_search#result'
 
   get 'a1630tyrank' => 'a1630tyrank#index'
+
+  get 'rakuten_book_search' => 'rakuten_book_search#index'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
