@@ -1,15 +1,8 @@
-<div class="starter-template">
+<%= form_tag('/rakuten_item_search_result', :method => :get) do %>
+<div class="form-group">
   <h1>商品検索</h1>
-    <table class="table table-hover">
-      <tr>
-        <th>商品名</th>
-        <th>値段</th>
-      </tr>
-      <% @items.each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td><%= item.price %></td>
-      </tr>
-      <% end %>
-    </table>
+  <%= label_tag('iname', '商品名') %>
+  <%= text_field_tag('iname', 'Rails', :class => 'form-control') %>
+  <%= submit_tag('検索', :class => 'btn btn-info') %>
 </div>
+<% end %>

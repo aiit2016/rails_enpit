@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'rakuten_item_ranking' => 'rakuten_item_ranking#index'
   get 'rakuten_item_search' => 'rakuten_item_search#index'
+  get 'rakuten_item_search_result' => 'rakuten_item_search#result'
 
   get 'a1630tyrank' => 'a1630tyrank#index'
   # Example of named route that can be invoked with purchase_url(id: product.id)
