@@ -1,10 +1,11 @@
-<div class="srarter-template">
-  <h1>楽天商品検索API テスト</h1>
-    <table calss="table table-hover">
-    <tr>
-      <th>商品名</th>
-      <th>値段</th>
-<% @rankings.each do |ranking| %>
+<div class="starter-template">
+  <h1>50代男性 のランキングTOP 30</h1>
+   <table class="table table-hover">
+      <tr>
+        <th>商品名</th>
+        <th>値段</th>
+      </tr>
+      <% @rankings.each do |ranking| %>
       <tr>
         <td><%= ranking.name %></td>
         <td><%= ranking.price %></td>
@@ -13,4 +14,6 @@
     </table>
 </div>
 
- 
+
+
+
