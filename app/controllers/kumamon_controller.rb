@@ -5,8 +5,8 @@ class KumamonController < ApplicationController
 
  def index
     RakutenWebService.configure do |c|
-      c.application_id = ENV["RAPI_APPID"]
-      c.affiliate_id = ENV["RAPI_AFID"]
+      c.application_id = ENV["APPID"]
+      c.affiliate_id = ENV["AFID"]
     end
     @rankings = RakutenWebService::Ichiba::Item.ranking(:age => 30, :sex => 0)
     
