@@ -9,6 +9,6 @@ class KumamonController < ApplicationController
       c.affiliate_id = ENV["RAPI_AFID"]
     end
 
-    @items = RakutenWebService::Books::Total.search(:keyword => 'Rails')
-  end
+    @ranking = RakutenWebService::Ichiba::Genre[100316].ranking
+ end
 end

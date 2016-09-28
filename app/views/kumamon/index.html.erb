@@ -1,30 +1,16 @@
-<!DOCTYPE html>
-<html lang='ja'>
-<head>
-<title>楽天商品検索API テスト</title>
-<meta charset='utf-8'>
-</head>
-<body>
-<?php
-$rakuten_relust = getRakutenResult( "図書館戦争', 1000); // キーワードと最低価格を指定
-foreach ($rakuten_relust as $item) :
-?>
-<div style='margin-bottom: 20px; padding: 30px; border: 1px solid #000; overflow:hidden;'>
- <div style='float: left;'><img src='<?php echo $item['img']; ?>'></div>
- <div style='float: left; padding: 20px;'>
- <div><?php echo $item['name']; ?></div>
- <div><a href='<?php echo $item['url']; ?>' target=" "><?php echo $item['url']; ?></a></div>
- <div><?php echo $item['price']; ?>円</div>
- <div><?php echo $item['shop']; ?></div>
- </div>
+<div class="srarter-template">
+  <h1>楽天商品検索API テスト</h1>
+    <table calss="table table-hover">
+    <tr>
+      <th>商品名</th>
+      <th>値段</th>
+<% @rankings.each do |ranking| %>
+      <tr>
+        <td><%= ranking.name %></td>
+        <td><%= ranking.price %></td>
+      </tr>
+      <% end %>
+    </table>
 </div>
-<?php
-endforeach;
-?>
-</body>
-</html>
-  
-<?php 
- 
-function getRakutenResult($keyword, $min_price) {
+
  
