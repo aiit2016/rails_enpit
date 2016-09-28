@@ -8,7 +8,7 @@ class KumamonController < ApplicationController
       c.application_id = ENV["APPID"]
       c.affiliate_id = ENV["AFID"]
     end
-    @rankings = RakutenWebService::Ichiba::Item.ranking(:age => 30, :sex => 0)
+    @rankings = RakutenWebService::Ichiba::Item.ranking(:age => 50, :sex => 0)
     
  end
 end
